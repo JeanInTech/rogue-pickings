@@ -45,12 +45,16 @@ p {
 
 /*The widths are in a percentage!*/
 header {
+	width: 100%;
 	display: flex;
 	flex-flow: column wrap;
 	align-items: center;
 }
 header h1 {
+	width: 100%;
 	border-bottom: 4px solid #77a466;
+	text-align: center;
+	padding: 0 0 .615em;
 }
 header h1 span {
 	color: #77a466;
@@ -60,7 +64,8 @@ header nav ul {
     padding: 0;
 }
 header nav ul li {
-	text-align: center;
+	display: flex;
+	justify-content: space-between;
 	text-transform: uppercase;
 	list-style: none;
 	font-weight: 700;
@@ -159,15 +164,23 @@ footer span {
 
 @media (min-width: 1200px) {
 	header {
+		flex: row wrap;
+		width: auto;
 		display: flex;
 		flex-direction: row;
 		flex-basis: 100%;
 		justify-content: space-between;
+		margin: 0;
+		padding: 0;
 	}
 	header h1 {
+		flex: 1;
+		text-align: left;
 		border-bottom: none;
+		padding: 0 0 0 0;
 	}
 	header nav ul li {
+		flex: 2;
 		display: inline;
 		text-transform: uppercase;
 		justify-content: center;
